@@ -1,0 +1,41 @@
+{
+  "name": "my-npm-template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "template-generator": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LangJhowe/tslib.git"
+  },
+  "author": "Leung Jhowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LangJhowe/tslib/issues"
+  },
+  "homepage": "https://github.com/LangJhowe/tslib#readme",
+  "devDependencies": {
+    "@eslint/create-config": "^0.1.2",
+    "@types/ejs": "^3.1.0",
+    "@types/inquirer": "^8.2.0",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "nodemon": "^2.0.15",
+    "shx": "^0.3.4",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "inquirer": "^8.2.0"
+  }
+}
