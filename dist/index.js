@@ -31,6 +31,7 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const inquirer = __importStar(require("inquirer"));
 const chalk_1 = __importDefault(require("chalk"));
+const template_1 = require("./utils/template");
 const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
 const QUESTIONS = [
     {
@@ -86,7 +87,8 @@ function createDirectoryContents(templatePath, projectName) {
             return;
         if (stats.isFile()) {
             // read file content and transform it using template engine
-            const contents = fs.readFileSync(origFilePath, 'utf8');
+            let contents = fs.readFileSync(origFilePath, 'utf8');
+            contents = (0, template_1.render)(contents, { projectName });
             // write file to destination folder
             const writePath = path.join(CURR_DIR, projectName, file);
             fs.writeFileSync(writePath, contents, 'utf8');
