@@ -1,7 +1,6 @@
 {
   "name": "@ljhowe/template",
   "version": "0.1.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
@@ -9,18 +8,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "template-generator": "./dist/index.js"
+    "template-generator": "dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LangJhowe/tslib.git"
+    "url": "git+https://github.com/LangJhowe/my-npm-template.git"
   },
   "author": "Leung Jhowe",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LangJhowe/tslib/issues"
+    "url": "https://github.com/LangJhowe/my-npm-template/issues"
   },
-  "homepage": "https://github.com/LangJhowe/tslib#readme",
+  "homepage": "https://github.com/LangJhowe/my-npm-template#readme",
   "devDependencies": {
     "@eslint/create-config": "^0.1.2",
     "@types/ejs": "^3.1.0",
@@ -37,5 +36,6 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "inquirer": "^8.2.0"
-  }
+  },
+  "description": ""
 }
